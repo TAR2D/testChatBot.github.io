@@ -1,0 +1,247 @@
+/* CSS Reset Setting
+Reference: https://meyerweb.com/eric/tools/css/reset/ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, span,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Clear anchor tag properties */
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+:root {
+    --ff-primary:'Roboto', sans-serif;
+}
+
+.chatBot {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+.chatBot__Box {
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.5);
+}
+
+.chatBot__header {
+    background-color: #c81f45;
+    width: 100%;
+    height: 10%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom: 2px solid whitesmoke;
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.chatBot__header--title{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.chatBot__header--title i {
+    color:#c81f44;
+    background-color: white;
+    padding: 5px;
+    border-radius: 45%;
+}
+
+.chatBot__header--title h3 {
+    padding-top: 2px;
+    color: white;
+    margin-left: 3px;
+    font-family: var(--ff-primary);
+}
+
+.chatBot__header--close button{
+    border: none;
+    margin-right: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.chatBot__msgBox{
+    padding: 4px 0;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 80%;
+    border-left: 0.5px solid whitesmoke;
+    border-right: 0.5px solid whitesmoke;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.msg__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.msg__item i {
+    color: white;
+    font-size: 1em;
+    background-color: #c81f45;
+    border-radius: 45%;
+    margin-left: 3px;
+    padding: 5px;
+}
+ 
+.msg__item h4 {
+    margin: 4px 4px;
+    padding: 10px 14px;
+    font-size: 0.85em;
+    font-family: var(--ff-primary);
+}
+
+.msg__item--user  {
+    justify-content: flex-end;
+}
+
+.msg__item--user h4 {
+    color: white;
+    margin-left: 50px;
+    background-color: #c81f44;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.msg__item--bot h4 {
+    background-color: rgba(99, 99, 99, 0.2);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.chatBot__footer {
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.chatBot__footer input {
+    width:75%;
+    margin-left: 5%;
+    border: none;
+}
+.chatBot__footer input::placeholder {
+    color: rgb(194, 194, 194);
+}
+
+.chatBot__footer input:focus {
+    outline: none;
+}
+
+.chatBot__footer--send {
+    width:15%;
+}
+
+.chatBot__footer--send button{
+    border: none;
+    background-color: transparent;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #c81f45;
+}
+
+
+.chatBot__Button {
+    width: 50px;
+    height: 50px;
+    float: right;
+
+    border-radius: 2em;
+    -webkit-box-shadow: 0px 0px 30px -6px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 30px -6px rgba(0,0,0,0.5);
+}
+
+.chatBot__Button button {
+
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 2em;
+
+    border-radius: 45%;
+    background-color: #c81f45;
+    border:0;
+    cursor: pointer;
+}
+
+.chatBot__Button button:hover {
+    background-color: #c81f44d0;
+}
